@@ -1,0 +1,316 @@
+@charset "utf-8";
+/*!
+ * animsition v4.0.1
+ * A simple and easy jQuery plugin for CSS animated page transitions.
+ * http://blivesta.github.io/animsition
+ * License : MIT
+ * Author : blivesta (http://blivesta.com/)
+ */
+.animsition,
+.animsition-overlay {
+  position: relative;
+  opacity: 0;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+/**
+ * overlay option
+ */
+.animsition-overlay-slide {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: #ddd;
+}
+/* loading option */
+.animsition-loading,
+.animsition-loading:after {
+  width: 32px;
+  height: 32px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -16px;
+  margin-left: -16px;
+  border-radius: 50%;
+  z-index: 100;
+}
+
+.animsition-loading {
+  background-color: transparent;
+  border-top: 5px solid rgba(0, 0, 0, 0.2);
+  border-right: 5px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 5px solid rgba(0, 0, 0, 0.2);
+  border-left: 5px solid #eee;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  -webkit-animation-iteration-count:infinite;
+          animation-iteration-count:infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-duration: .8s;
+          animation-duration: .8s;
+  -webkit-animation-name: animsition-loading;
+          animation-name: animsition-loading;
+}
+
+@-webkit-keyframes animsition-loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes animsition-loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.fade-in {
+  -webkit-animation-name: fade-in;
+          animation-name: fade-in;
+}
+
+
+@-webkit-keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+.fade-out {
+  -webkit-animation-name: fade-out;
+          animation-name: fade-out;
+}
+
+
+/**************************************/
+            /********* losder css start ***********/
+            /**************************************/
+
+            #loader, #loader2, #loader3 {
+                width: 100%;
+                height: 100%;
+                position: fixed;
+                background-color: #fff;
+                z-index: 999999;
+                top: 0
+            }
+            #loader .loader-item, #loader2 .loader-item, #loader3 .loader-item {
+                position: absolute;
+                width: auto;
+                height: 100%;
+                top: 50%;
+                left: 50%;
+                text-align: center;
+                -webkit-transform: translate(-50%, -10%);
+                -ms-transform: translate(-50%, -10%);
+                transform: translate(-50%, -10%)
+            }
+            #loader .loader-item img, #loader2 .loader-item img, #loader3 .loader-item img {
+                display: block;
+            max-width: 350px;
+            }
+            #loader .spinner, #loader2 .spinner, #loader3 .spinner {
+                margin: 40px auto 0;
+                width: 70px;
+                text-align: center
+            }
+            #loader .spinner>div, #loader2 .spinner>div, #loader3 .spinner>div {
+                width: 18px;
+                height: 18px;
+                background-color: #ef050d;
+                border-radius: 100%;
+                display: inline-block;
+                -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+                animation: bouncedelay 1.4s infinite ease-in-out;
+                -webkit-animation-fill-mode: both;
+                animation-fill-mode: both
+            }
+            #loader .spinner .bounce1, #loader2 .spinner .bounce1, #loader3 .spinner .bounce1 {
+                -webkit-animation-delay: -.32s;
+                animation-delay: -.32s
+            }
+            #loader .spinner .bounce2, #loader2 .spinner .bounce2, #loader3 .spinner .bounce2 {
+                -webkit-animation-delay: -.16s;
+                animation-delay: -.16s
+            }
+            @-webkit-keyframes bouncedelay {
+            0%, 100%, 80% {
+            -webkit-transform:scale(0)
+            }
+            40% {
+            -webkit-transform:scale(1)
+            }
+            }
+            @keyframes bouncedelay {
+            0%, 100%, 80% {
+            transform:scale(0);
+            -webkit-transform:scale(0)
+            }
+            40% {
+            transform:scale(1);
+            -webkit-transform:scale(1)
+            }
+            }
+            #loader2 {
+                background-color: #fff
+            }
+            #loader2 .sk-spinner-wave.sk-spinner {
+                margin: 40px auto 0;
+                width: 50px;
+                height: 30px;
+                text-align: center;
+                font-size: 10px
+            }
+            #loader2 .sk-spinner-wave div {
+                background-color: #c59d5f;
+                height: 100%;
+                width: 6px;
+                display: inline-block;
+                -webkit-animation: sk-waveStretchDelay 1.2s infinite ease-in-out;
+                animation: sk-waveStretchDelay 1.2s infinite ease-in-out
+            }
+            #loader2 .sk-spinner-wave .sk-rect2 {
+                -webkit-animation-delay: -1.1s;
+                animation-delay: -1.1s
+            }
+            #loader2 .sk-spinner-wave .sk-rect3 {
+                -webkit-animation-delay: -1s;
+                animation-delay: -1s
+            }
+            #loader2 .sk-spinner-wave .sk-rect4 {
+                -webkit-animation-delay: -.9s;
+                animation-delay: -.9s
+            }
+            #loader2 .sk-spinner-wave .sk-rect5 {
+                -webkit-animation-delay: -.8s;
+                animation-delay: -.8s
+            }
+            @-webkit-keyframes sk-waveStretchDelay {
+            0%, 100%, 40% {
+            -webkit-transform:scaleY(.4);
+            transform:scaleY(.4)
+            }
+            20% {
+            -webkit-transform:scaleY(1);
+            transform:scaleY(1)
+            }
+            }
+            @keyframes sk-waveStretchDelay {
+            0%, 100%, 40% {
+            -webkit-transform:scaleY(.4);
+            transform:scaleY(.4)
+            }
+            20% {
+            -webkit-transform:scaleY(1);
+            transform:scaleY(1)
+            }
+            }
+            #loader3 {
+                background-color: #c59d5f
+            }
+            #loader3 .spinner {
+                margin: 40px auto 0;
+                width: 40px;
+                height: 40px;
+                position: relative;
+                text-align: center;
+                -webkit-animation: rotate 2s infinite linear;
+                animation: rotate 2s infinite linear
+            }
+            #loader3 .spinner .dot1, #loader3 .spinner .dot2 {
+                width: 60%;
+                height: 60%;
+                display: inline-block;
+                position: absolute;
+                top: 0;
+                background-color: #fff;
+                border-radius: 100%;
+                -webkit-animation: bounce 2s infinite ease-in-out;
+                animation: bounce 2s infinite ease-in-out
+            }
+            #loader3 .dot2 {
+                top: auto;
+                bottom: 0;
+                -webkit-animation-delay: -1s;
+                animation-delay: -1s
+            }
+            @-webkit-keyframes rotate {
+            100% {
+            -webkit-transform:rotate(360deg)
+            }
+            }
+            @keyframes rotate {
+            100% {
+            transform:rotate(360deg);
+            -webkit-transform:rotate(360deg)
+            }
+            }
+            @-webkit-keyframes bounce {
+            0%, 100% {
+            -webkit-transform:scale(0)
+            }
+            50% {
+            -webkit-transform:scale(1)
+            }
+            }
+            @keyframes bounce {
+            0%, 100% {
+            transform:scale(0);
+            -webkit-transform:scale(0)
+            }
+            50% {
+            transform:scale(1);
+            -webkit-transform:scale(1)
+            }
+            }
+
+            /**************************************/
+            /********* losder css end ***********/
+            /**************************************/

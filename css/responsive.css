@@ -1,0 +1,165 @@
+@charset "utf-8";
+/* CSS Document */
+@media (min-width:1900px){
+	.book_servicelist li{
+		width: 24%;
+	}
+
+}
+@media (min-width:1600px){
+.logo_left{
+  width: 16%;
+}
+.navi_right{
+  float: left;
+  width: 84%;
+}
+
+
+}
+@media (min-width:1200px){
+	
+.slider_cap h1{
+  font-size: 60px;
+}
+
+
+}
+
+
+@media (min-width:992px) and (max-width:1199px){
+.banner_service .innerbnr_cap {
+  width: 50%;
+}
+.book_servicelist li {
+  width: 49%;
+}
+	}
+	
+	
+	
+@media (min-width:768px) and (max-width:991px){
+.navi_main .navbar-nav > li > a {
+  font-size: 13px;
+  padding: 13px 11px;
+}
+.logo_left{
+	width:23%;
+}
+.navi_right{
+	width:77%;
+}
+.banner_service .innerbnr_cap, .innerbnr_cap{
+	width:59%;
+}
+.book_header h4{
+	font-size:18px;
+}
+.book_servicelist li {
+  width: 49%;
+}
+
+.banner_contact .innerbnr_cap {
+  width: 100%;
+}
+.contact_form{
+	width:45%;
+}
+.contact_right{
+	width:54%;
+}
+.book_servicelist li a {
+  text-shadow: 0 0 1px #999;
+}
+	}
+	
+	
+	
+@media (max-width:767px){
+	.logo_left{width: 230px; position: relative; z-index: 99;}
+	.navi_right {
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 100%;
+	}
+	.navi_right button {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  border: medium none;
+}
+.navi_right button span {
+  background: #fff none repeat scroll 0 0 !important;
+}
+.navi_right button:hover, .navi_right button:focus {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0 !important;
+}
+.navi_right #navbarCollapse {
+  background: #fff none repeat scroll 0 0;
+  left: 0;
+  position: absolute;
+  top: 45px;
+  width: 100%;
+  z-index: 99;
+}
+.navi_right #navbarCollapse .nav li a {
+  color: #000;
+}
+.navi_right #navbarCollapse .nav {
+  margin: 0;
+}
+#footer .col-sm-10 {
+  width: 63%;
+  float:left;
+  padding:0;
+}
+#footer .col-sm-2 {
+  float: left;
+  width: 34%;
+  padding:0;
+}
+.banner_cap h1{
+	font-size:30px;
+}
+.banner_service .innerbnr_cap, .innerbnr_cap {
+  margin: 0;
+  padding: 28% 15px;
+  width: 100%;
+}
+.book_header h4 {
+  font-size: 18px;
+}
+.book_servicelist li {
+  text-shadow: 0 0 2px #666;
+  width: 100%;
+}
+.footer_sec {
+  padding: 0 20px;
+}
+.faq_accord .panel-heading a{
+	font-size:15px;
+}
+.inner_head h1{
+	font-size:20px;
+}
+.packages_list li .pakglist_cotntent, .packages_list li .book_today{
+	width:100%;
+}
+.packages_list li .book_today {
+  width: 64%;
+}
+#loader .loader-item img, #loader2 .loader-item img, #loader3 .loader-item img{
+	max-width:280px !important;
+}
+.contact_form {
+  border: medium none;
+  padding-right: 0;
+  width: 100%;
+}
+.contact_right {
+  padding-left: 0;
+  width: 100%;
+}
+.book_servicelist li a {
+  text-shadow: 0 0 1px #999;
+}
+}	
